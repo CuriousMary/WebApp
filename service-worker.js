@@ -1,7 +1,7 @@
 self.addEventListener("install", event => {
   event.waitUntil(
       caches.open("pwa-cache-v2").then(cache => {
-          return cache.addAll(["/", "/index.html", "/manifest.json"]);
+          return cache.addAll(["/", "index.html", "manifest.json"]);
       })
   );
   self.skipWaiting(); // Forces the new service worker to take control immediately
